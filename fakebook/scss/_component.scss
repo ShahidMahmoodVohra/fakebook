@@ -1,0 +1,50 @@
+.logo{
+    height: 5rem;
+    width: 15rem;
+}
+
+.search{
+
+    &__button{
+
+    }
+
+    &__icon{
+        height: 2rem;
+        width: 2rem;
+
+    }
+
+    &__input{
+        
+    }
+
+}
+
+.user-nav{
+
+    &__icon-box{
+
+    }
+
+    &__icon{
+        height: 2.25rem;
+        width: 2.25rem;
+
+    }
+
+    &__notification{
+
+    }
+
+    &__user{
+
+    }
+
+    &__user-photo{
+        height: 4rem;
+        width: 4rem;
+        border-radius: 50px;
+
+    }
+}
