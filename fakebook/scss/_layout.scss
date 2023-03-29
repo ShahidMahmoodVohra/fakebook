@@ -1,43 +1,71 @@
 .container{
     width: 100%;
     margin: 0;
-    // box-shadow: 0 2rem 6rem rgba(0,0,0, .3);
 }
 
 .header{
     display: flex;
     justify-content: space-between;
-    // width: 100%;
-    // flex-direction: column;
+    align-items: center;
     // position: fixed;
-    height: 15.6rem;
+    font-size: 1.5rem;
+    width: 100%;
+    height: 5.5rem;
     background-color: #fff;
     border-bottom: 1px solid #E4E6EB;
-    
-
 }
 
 .content{
     display: flex;
-    background-color: var(--color-content);
-
+    background-color: #F0F2F5;
+    // height: 200vh;
+    
 }
 
-.left-side{
-    background-color: blue;
+
+                        
+.scrollbar{
+    width: 30rem;
+    height: 100vh;
+    border-right: 15px solid transparent;
+    overflow: -moz-hidden-unscrollable;
+    
+::-webkit-scrollbar {
+    width: 30px;
+  }
+::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+    border-radius: 8px;
+    }
+::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    }
+::-webkit-scrollbar-thumb:hover {
+    background: #d8d6d6; 
+    }
+
+    &:hover{
+        border-right: 10px solid #c0bebe;
+    }
+}
+
+.sidebar{
+    // background-color: blue;
     flex: 0 0 20%;
-    font-size: 1.2rem;
+    // height: 50rem;
+    background-color: #F0F2F5;
 
 }
+
 
 .main-view{
-    background-color: yellow;
+    // background-color: yellowgreen;
     // padding-left: 32px;
     flex: 1;
-
 }
-.right-side{
-    background-color: orangered;
+
+.sidebar-L{
+    // background-color: orangered;
     flex: 0 0 22%;
-
 }
+

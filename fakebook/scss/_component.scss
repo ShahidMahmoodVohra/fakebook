@@ -1,50 +1,526 @@
+// HEADER SECTION/////////////////////////////
 .logo{
     height: 5rem;
     width: 15rem;
 }
 
 .search{
+    flex: 0 0 30%;
 
     &__button{
-
+        border: none;
+        background-color: transparent;
     }
 
     &__icon{
         height: 2rem;
         width: 2rem;
-
+        transform: translate(34px, 34px);
+        fill: var(--color-grey-light-1);
     }
 
     &__input{
+        font-family: inherit;
+        font-size: inherit;
+        background-color: var(--color-content);
+        border: none;
+        padding: 1.2rem 4rem;
+        border-radius: 100px;
+        width: 49.5rem;
+        margin-left: 2.5rem;
+        margin-bottom: 2.4rem;
+        transition: all .2s;
         
+        &:focus,
+        &:hover{
+            background-color: #e7e7e9;
+            outline: none;        
+        }
+        &::-webkit-input-placeholder{
+            font-weight: 100;
+        }
     }
-
 }
 
+// ------USER NAVIGATION---------/////////////////////
+
 .user-nav{
+    display: flex;
+    align-items: center;
+    align-self: stretch;
+    margin-right: .5rem;
 
-    &__icon-box{
-
+    & > *{
+        padding: 0 1rem;
+        cursor: pointer;
+        height: 100%;
+        display: flex;
+        align-items: center;
     }
+    
+    & > *:focus{
+        background-color: var(--color-content);
+    } 
+    
+    &__icon-box{
+        background-color: #E4E6EB;
+        border-radius: 50px;
+        height: 4rem;
+        width: 4rem;
+        position: relative;
+        margin-left: .5rem;
 
+        &:hover{
+            background-color: #e7e7e9;
+            outline: none;        
+        }
+    }
+    
     &__icon{
-        height: 2.25rem;
-        width: 2.25rem;
-
+        height: 1.8rem;
+        fill: #050505;
+        display: flex;
+    }
+     
+    &__icon-down{
+        position:absolute;
+        top: 3.5rem;
+        right: 1.3rem;
+        height: 2rem;
+        width: 2rem;
+        background-color: #E4E6EB;
+        border-radius: 50%;
+        fill:#050505 ;
+        padding: 0 5px;
+        border: 1px solid #fff;
+        font-weight: 400;
     }
 
     &__notification{
+        position: absolute;
+        top: -0.3rem;
+        right: .1rem;
+        font-size: 1.2rem;
+        height: 2rem;
+        width: 2rem;
+        background-color: #E41E3F;
+        color: #fff;
+        border-radius: 100px;
+        padding: .1rem .3rem;
 
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    &__user{
-
+    &__notification-1{
+        position: absolute;
+        top: 0.5rem;
+        right: 1.5rem;
+        font-size: 1.2rem;
+        height: 1.4rem;
+        width: 1.4rem;
+        background-color: #E41E3F;
+        color: #fff;
+        border-radius: 50px;
+        padding: .1rem .3rem;
+        border: 1px solid #fff;
     }
 
     &__user-photo{
-        height: 4rem;
-        width: 4rem;
+        height: 4.5rem;
+        width: 4.5rem;
         border-radius: 50px;
 
     }
+}
+
+// --------SIDE NAVIGATION--------------- 
+
+.side-nav{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    color: #050505;
+    font-weight: bolder;
+    margin:1rem 0 0 1rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #CED0D4;
+
+    &__item{
+    padding-bottom: 10px; 
+
+    &:hover{
+        background-color: #dfdfe2;
+        border-radius: 8px;
+    }
+    
+    }
+    
+    &__link{
+        padding: .3rem 0;
+        text-decoration: none;
+        // display: block;
+
+        display: flex;
+        align-items: center;
+
+    }
+    &__link span{
+        padding: 0 0 0 1.5rem;
+        color: rgba(5, 5, 5, .8);
+    }
+
+    &__icon{
+        height: 2.75rem;
+        width: 2.75rem;
+        padding: .2rem 0;
+        fill: #0571ED;
+    }
+    
+    
+    &__user-photo-2{
+        height: 2.75rem;
+        width: 2.75rem;
+        border-radius: 50px;
+        
+    }
+}
+
+.legal{
+    font-size: 1.2rem;
+    padding: 1.5rem;
+    color: currentColor;
+
+}
+
+// --------------ASIDE RIGHT SECTION--------------
+
+.aside-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+
+    
+
+    &__top{
+        font-size: 1.5rem;
+        color: #59595a;
+        font-weight: 500;
+        
+    }
+
+    &__3dots{
+
+        font-size: 2rem;
+        font-weight: bolder;
+        padding:  0rem 1rem;
+        margin-bottom: .5rem;
+        margin-right: .1rem;
+        height: 35px;
+        width: 35px;
+        border-radius: 50px;
+        display: inline-block;
+
+
+        &:hover{
+            background-color: #dfdfe2;
+            border-radius: 100px;
+        }
+    }
+
+    &__see-all{
+        font-size: 14px;
+        font-weight: 400;
+        color: #0571ED;
+        cursor: pointer;
+    }
+
+
+}
+
+.side-navL{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    color: #59595a;
+    font-weight: bolder;
+    margin:1rem 0 0 1rem;
+    padding-bottom: 1rem;
+    // border-bottom: 1px solid #CED0D4;
+
+    &__item{
+        padding-bottom: 10px; 
+    
+        &:hover{
+            background-color: #dfdfe2;
+            border-radius: 8px;
+        }
+        
+        }
+        &__link{
+            padding: .3rem 0;
+            text-decoration: none;
+            // display: block;
+            display: flex;
+            align-items: center;
+    
+        }
+
+        &__link span{
+            padding: 0 0 0 1.5rem;
+            color: #95979A;
+        }
+        
+        .color-dark{
+            color: #59595a;
+            font-weight: 500;
+        }
+        
+        &__icon{
+            height: 2.75rem;
+            width: 2.75rem;
+            padding: .2rem 0;
+            fill: #95979A;
+        }
+        
+        &__user-photo-3{
+            height: 2.75rem;
+            width: 2.75rem;
+            border-radius: 50px;
+        }    
+
+}
+.friends{
+    cursor: pointer;
+    
+    &__photo-4{
+        height: 6rem;
+        width: 6rem;
+        border-radius: 50px;
+        background: #0571ED;
+        // display: block;
+    }
+
+    &__name{
+        display: flex;
+        justify-content: space-around;
+        font-size: 15px;
+        position: relative;
+        bottom: 6rem;
+        left: 4.8rem;
+        margin-right: 2rem;
+        color: #59595a;
+    }
+
+    &__name-2d{
+        font-weight: 100;
+        color: #95979A;
+    }
+
+    &__mutual{
+        display: inline-block;
+    }
+
+    &__mutual-14{
+        display: flex;
+        position: relative;
+        bottom: 7.5rem;
+        left: 11rem;
+        align-items: center;
+        color: #95979A;
+        font-weight: 100;
+    }
+
+    &__mutual span{
+        position: relative;
+        bottom: 5.7rem;
+        left: 8rem;
+        height: 2rem;
+        width: 2rem;
+        background-color: #050505;
+        border-radius: 100px;
+        border: 1px solid #fff;
+        display: flex; 
+    }
+
+    &__buttons{
+        display: flex;
+        position: relative;
+        bottom: 6.5rem;
+        left: 8rem;
+    }
+    
+    &__btn-1{
+        padding: .9rem 2rem;
+        margin: 0 .3rem;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        color: #fff;
+        background-color: #0571ED;
+        cursor: pointer;
+
+    }
+
+    &__btn-2{
+        padding: .9rem 2rem;
+        margin: 0 .3rem;
+        border: 1px solid transparent;
+        border-radius: 5px;
+        color: #59595a;
+        background-color: #E4E6EB;
+        cursor: pointer;
+
+
+    }
+    &:hover{
+        background-color: rgba(229, 229, 231, .5);
+        border-radius: 8px;
+        height: 9.8rem;
+    }
+}
+
+
+
+.aside-headingB{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+
+    &__top{
+        font-size: 1.7rem;
+        color: #59595a;
+        font-weight: 500;
+        margin-left: 1rem;
+    }
+}
+
+.side-navB{
+    display: flex;
+    flex-direction: column;
+    font-size: 1.3rem;
+    color: #050505;
+    font-weight: bolder;
+    margin:1rem 0 0 1rem;
+    padding-bottom: 1rem;
+
+    &__item{
+    padding-bottom: 10px; 
+
+    &:hover{
+        background-color: #dfdfe2;
+        border-radius: 8px;
+    }
+    
+    }
+    
+    &__link{
+        padding: .3rem 0;
+        text-decoration: none;
+        // display: block;
+
+        display: flex;
+        align-items: center;
+
+    }
+    &__link span{
+        padding: 0 0 0 1.5rem;
+        color: #59595a;
+    }
+
+    &__icon{
+        height: 5rem;
+        width: 5rem;
+        padding: .4rem 0;
+        fill: #0571ED;
+    }
+    &__span b{
+        color: #050505;
+    }
+    
+}
+.aside-headingF{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 1rem;
+
+    &__top{
+        font-size: 1.7rem;
+        color: #59595a;
+        font-weight: 500;
+        margin-left: 1rem;
+    }
+    &__top-b{
+        color: #59595a;
+        margin: 0 8rem 0 0;
+    }
+    &__3dots {
+        font-size: 2rem;
+        font-weight: bolder;
+        padding: 0rem 1rem 0 .8rem;
+        color: #59595a;
+        margin-bottom: 0.5rem;
+        margin-right: 0.1rem;
+        height: 35px;
+        width: 35px;
+        border-radius: 50px;
+        display: inline-block;
+
+        &:hover{
+            background-color: #dfdfe2;
+            border-radius: 100px;
+        }
+    }
+    
+}
+
+.side-navF{
+    display: flex;
+    font-size: 1.3rem;
+    color: #050505;
+    font-weight: bolder;
+    margin:1rem 0 0 1rem;
+    padding-bottom: 1rem;
+
+    &__item{
+    padding-bottom: 5px 10px 5px 10px; 
+
+    &:hover{
+        background-color: #dfdfe2;
+        border-radius: 100px;
+    }
+    
+    }
+    
+    &__link{
+        padding: .3rem .6rem;
+        text-decoration: none;
+        // display: block;
+
+        display: flex;
+        align-items: center;
+
+    }
+    &__link span{
+        padding: 0 0 0 1.5rem;
+        color: #59595a;
+    }
+
+    &__icon{
+        height: 2.5rem;
+        width: 2.5rem;
+        padding: .4rem 0;
+        fill: #95979A;
+        
+    }
+    
+    
+
+    
+    
+    
 }

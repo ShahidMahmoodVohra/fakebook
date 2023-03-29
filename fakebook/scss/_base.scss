@@ -1,6 +1,8 @@
 :root{
     --color-content:#F0F2F5;
 
+    --color-grey-light-1:#65676B;
+    --color-grey-light-2:#656781;
 }
 
 *{
@@ -22,8 +24,9 @@ html{
 
 body{
     font-family: 'Open-Sans', sans-serif;
-    background: #fff;
-    color: #1c1e21;
-    direction: ltr;
+    // background: #fff;
+    // direction: ltr;
     line-height: 1.34;
+    background: #F0F2F5;
+
 }
